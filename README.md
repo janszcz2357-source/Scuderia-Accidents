@@ -40,3 +40,13 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
 API reference: <https://gridos.thesimgrid.com/>
+
+## Single-file preview
+
+Opening `index.html` directly (e.g. from a phone's file manager) shows an unstyled page because the CSS, JS and logo are separate files. To get one file that works anywhere:
+
+```sh
+node scripts/build-standalone.mjs --sample   # writes speediots-standalone.html
+```
+
+Drop `--sample` to embed the real `data/simgrid.json` instead.

@@ -268,9 +268,13 @@
     skeletons();
     setSync('loading', 'Connecting…');
     try {
-      const res = await fetch(SOURCE, { cache: 'no-store' });
-      if (!res.ok) throw new Error(res.status);
-      let d = await res.json();
+      // Single-file builds embed their data, since fetch() can't read local files.
+      let d = window.SIMGRID_DATA;
+      if (!d) {
+        const res = await fetch(SOURCE, { cache: 'no-store' });
+        if (!res.ok) throw new Error(res.status);
+        d = await res.json();
+      }
       if (!d || !Array.isArray(d.championships) || !d.championships.length) throw new Error('empty');
       if (d.source === 'sample') d = rebase(d);
       data = d;
