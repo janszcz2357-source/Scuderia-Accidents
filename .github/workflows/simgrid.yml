@@ -1,0 +1,50 @@
+name: Sync SimGrid data
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: simgrid-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SIMGRID_API_TOKEN: ${{ secrets.SIMGRID_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch SimGrid snapshot
+        if: ${{ env.SIMGRID_API_TOKEN != '' }}
+        env:
+          SIMGRID_CHAMPIONSHIP_IDS: ${{ vars.SIMGRID_CHAMPIONSHIP_IDS }}
+          SIMGRID_COMMUNITY_ID: ${{ vars.SIMGRID_COMMUNITY_ID }}
+        run: node scripts/fetch-simgrid.mjs
+
+      - name: Skip (no token)
+        if: ${{ env.SIMGRID_API_TOKEN == '' }}
+        run: echo "SIMGRID_API_TOKEN secret is not set; nothing to sync."
+
+      - name: Commit snapshot if it changed
+        run: |
+          [ -f data/simgrid.json ] || exit 0
+          # generated_at always changes; only commit when the actual data did.
+          if git diff --quiet -I '"generated_at"' -- data/simgrid.json 2>/dev/null && git ls-files --error-unmatch data/simgrid.json >/dev/null 2>&1; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/simgrid.json
+          git commit -m "Update SimGrid data"
+          git push
