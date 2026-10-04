@@ -1,0 +1,548 @@
+{
+  "source": "sample",
+  "generated_at": "2026-10-04T12:00:00.000Z",
+  "next_race": {
+    "id": 900001,
+    "name": "Round 7",
+    "starts_at": "2026-10-10T18:30:00.000Z",
+    "ended": false,
+    "results_available": false,
+    "track": {
+      "name": "Circuit de Spa-Francorchamps",
+      "photo": null
+    },
+    "championship": "S5┃ACC┃GT3 Championship",
+    "championship_id": 25108,
+    "url": "https://www.thesimgrid.com/championships/25108"
+  },
+  "upcoming": [
+    {
+      "id": 900001,
+      "name": "Round 7",
+      "starts_at": "2026-10-10T18:30:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Circuit de Spa-Francorchamps",
+        "photo": null
+      },
+      "championship": "S5┃ACC┃GT3 Championship",
+      "championship_id": 25108,
+      "url": "https://www.thesimgrid.com/championships/25108"
+    },
+    {
+      "id": 900002,
+      "name": "Round 3 · 3 Hours",
+      "starts_at": "2026-10-14T18:00:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Autodromo Nazionale Monza",
+        "photo": null
+      },
+      "championship": "Speediots Endurance Series",
+      "championship_id": 900001,
+      "url": "https://www.thesimgrid.com/championships/900001"
+    },
+    {
+      "id": 900003,
+      "name": "Round 8",
+      "starts_at": "2026-10-17T18:30:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Circuit Zandvoort",
+        "photo": null
+      },
+      "championship": "S5┃ACC┃GT3 Championship",
+      "championship_id": 25108,
+      "url": "https://www.thesimgrid.com/championships/25108"
+    },
+    {
+      "id": 900004,
+      "name": "Round 9",
+      "starts_at": "2026-10-24T18:30:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Mount Panorama Circuit",
+        "photo": null
+      },
+      "championship": "S5┃ACC┃GT3 Championship",
+      "championship_id": 25108,
+      "url": "https://www.thesimgrid.com/championships/25108"
+    },
+    {
+      "id": 900005,
+      "name": "Round 4 · 3 Hours",
+      "starts_at": "2026-10-28T19:00:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Silverstone Circuit",
+        "photo": null
+      },
+      "championship": "Speediots Endurance Series",
+      "championship_id": 900001,
+      "url": "https://www.thesimgrid.com/championships/900001"
+    },
+    {
+      "id": 900006,
+      "name": "Round 10 · Finale",
+      "starts_at": "2026-10-31T19:30:00.000Z",
+      "ended": false,
+      "results_available": false,
+      "track": {
+        "name": "Circuit de Barcelona-Catalunya",
+        "photo": null
+      },
+      "championship": "S5┃ACC┃GT3 Championship",
+      "championship_id": 25108,
+      "url": "https://www.thesimgrid.com/championships/25108"
+    }
+  ],
+  "latest_result": {
+    "race_id": 899999,
+    "race": "Round 6",
+    "championship": "S5┃ACC┃GT3 Championship",
+    "url": "https://www.thesimgrid.com/championships/25108",
+    "starts_at": "2026-10-03T18:30:00.000Z",
+    "track": {
+      "name": "Nürburgring GP",
+      "photo": null
+    },
+    "class": "GT3",
+    "classes": [
+      "GT3"
+    ],
+    "results": [
+      {
+        "pos": 1,
+        "name": "L. Marchetti",
+        "number": 43,
+        "car": "Ferrari 296 GT3",
+        "car_logo": null,
+        "laps": 24,
+        "time": "46:12.345",
+        "best_lap": "1:38.684",
+        "points": 25,
+        "fastest_lap": false
+      },
+      {
+        "pos": 2,
+        "name": "J. Kowalski",
+        "number": 52,
+        "car": "Porsche 992 GT3 R",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+5.854",
+        "best_lap": "1:38.205",
+        "points": 18,
+        "fastest_lap": false
+      },
+      {
+        "pos": 3,
+        "name": "T. Van Dijk",
+        "number": 11,
+        "car": "BMW M4 GT3",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+9.732",
+        "best_lap": "1:37.884",
+        "points": 15,
+        "fastest_lap": true
+      },
+      {
+        "pos": 4,
+        "name": "M. Andersson",
+        "number": 14,
+        "car": "Mercedes-AMG GT3 Evo",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+11.560",
+        "best_lap": "1:38.733",
+        "points": 12,
+        "fastest_lap": false
+      },
+      {
+        "pos": 5,
+        "name": "R. Silva",
+        "number": 76,
+        "car": "McLaren 720S GT3 Evo",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+15.734",
+        "best_lap": "1:39.796",
+        "points": 10,
+        "fastest_lap": false
+      },
+      {
+        "pos": 6,
+        "name": "F. Novak",
+        "number": 66,
+        "car": "Lamborghini Huracán GT3 Evo2",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+23.539",
+        "best_lap": "1:39.576",
+        "points": 8,
+        "fastest_lap": false
+      },
+      {
+        "pos": 7,
+        "name": "D. Moreau",
+        "number": 6,
+        "car": "Audi R8 LMS GT3 evo II",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+31.763",
+        "best_lap": "1:39.406",
+        "points": 6,
+        "fastest_lap": false
+      },
+      {
+        "pos": 8,
+        "name": "K. Schulz",
+        "number": 57,
+        "car": "Aston Martin V8 Vantage GT3",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+36.633",
+        "best_lap": "1:38.815",
+        "points": 4,
+        "fastest_lap": false
+      },
+      {
+        "pos": 9,
+        "name": "A. Rossi",
+        "number": 10,
+        "car": "Ford Mustang GT3",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+41.432",
+        "best_lap": "1:38.688",
+        "points": 2,
+        "fastest_lap": false
+      },
+      {
+        "pos": 10,
+        "name": "P. Horvath",
+        "number": 13,
+        "car": "Honda NSX GT3 Evo",
+        "car_logo": null,
+        "laps": 24,
+        "time": "+47.151",
+        "best_lap": "1:39.996",
+        "points": 1,
+        "fastest_lap": false
+      }
+    ],
+    "fastest_lap": {
+      "name": "T. Van Dijk",
+      "time": "1:37.884",
+      "car": "BMW M4 GT3"
+    }
+  },
+  "championships": [
+    {
+      "id": 25108,
+      "name": "S5┃ACC┃GT3 Championship",
+      "game": "Assetto Corsa Competizione",
+      "host": "Speediots Racing",
+      "image": "https://cdn.thesimgrid.com/6basfspvver4qmilpoqkm69o7t0z",
+      "url": "https://www.thesimgrid.com/championships/25108",
+      "results_url": "https://www.thesimgrid.com/championships/25108/results",
+      "discord_url": null,
+      "capacity": 40,
+      "spots_taken": 34,
+      "accepting_registrations": true,
+      "teams": false,
+      "rounds_total": 10,
+      "rounds_done": 6,
+      "standings": [
+        {
+          "pos": 1,
+          "name": "L. Marchetti",
+          "number": 43,
+          "car": "Ferrari 296 GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 320,
+          "country": "IT",
+          "avatar": null
+        },
+        {
+          "pos": 2,
+          "name": "J. Kowalski",
+          "number": 52,
+          "car": "Porsche 992 GT3 R",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 312,
+          "country": "PL",
+          "avatar": null
+        },
+        {
+          "pos": 3,
+          "name": "T. Van Dijk",
+          "number": 11,
+          "car": "BMW M4 GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 307,
+          "country": "NL",
+          "avatar": null
+        },
+        {
+          "pos": 4,
+          "name": "M. Andersson",
+          "number": 14,
+          "car": "Mercedes-AMG GT3 Evo",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 286,
+          "country": "SE",
+          "avatar": null
+        },
+        {
+          "pos": 5,
+          "name": "R. Silva",
+          "number": 76,
+          "car": "McLaren 720S GT3 Evo",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 271,
+          "country": "PT",
+          "avatar": null
+        },
+        {
+          "pos": 6,
+          "name": "F. Novak",
+          "number": 66,
+          "car": "Lamborghini Huracán GT3 Evo2",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 266,
+          "country": "CZ",
+          "avatar": null
+        },
+        {
+          "pos": 7,
+          "name": "D. Moreau",
+          "number": 6,
+          "car": "Audi R8 LMS GT3 evo II",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 256,
+          "country": "FR",
+          "avatar": null
+        },
+        {
+          "pos": 8,
+          "name": "K. Schulz",
+          "number": 57,
+          "car": "Aston Martin V8 Vantage GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 250,
+          "country": "DE",
+          "avatar": null
+        },
+        {
+          "pos": 9,
+          "name": "A. Rossi",
+          "number": 10,
+          "car": "Ford Mustang GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 233,
+          "country": "IT",
+          "avatar": null
+        },
+        {
+          "pos": 10,
+          "name": "P. Horvath",
+          "number": 13,
+          "car": "Honda NSX GT3 Evo",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 222,
+          "country": "HU",
+          "avatar": null
+        },
+        {
+          "pos": 11,
+          "name": "S. Nielsen",
+          "number": 56,
+          "car": "Ferrari 296 GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 201,
+          "country": "DK",
+          "avatar": null
+        },
+        {
+          "pos": 12,
+          "name": "B. Costa",
+          "number": 74,
+          "car": "Porsche 992 GT3 R",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 196,
+          "country": "ES",
+          "avatar": null
+        },
+        {
+          "pos": 13,
+          "name": "E. Laurent",
+          "number": 30,
+          "car": "BMW M4 GT3",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 189,
+          "country": "BE",
+          "avatar": null
+        },
+        {
+          "pos": 14,
+          "name": "H. Fischer",
+          "number": 9,
+          "car": "Mercedes-AMG GT3 Evo",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 167,
+          "country": "AT",
+          "avatar": null
+        },
+        {
+          "pos": 15,
+          "name": "C. Byrne",
+          "number": 76,
+          "car": "McLaren 720S GT3 Evo",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 145,
+          "country": "IE",
+          "avatar": null
+        },
+        {
+          "pos": 16,
+          "name": "N. Petrov",
+          "number": 8,
+          "car": "Lamborghini Huracán GT3 Evo2",
+          "car_logo": null,
+          "class": "GT3",
+          "points": 129,
+          "country": "BG",
+          "avatar": null
+        }
+      ]
+    },
+    {
+      "id": 900001,
+      "name": "Speediots Endurance Series",
+      "game": "Assetto Corsa Competizione",
+      "host": "Speediots Racing",
+      "image": null,
+      "url": "https://www.thesimgrid.com/communities/speediots-racing",
+      "results_url": null,
+      "discord_url": null,
+      "capacity": 30,
+      "spots_taken": 16,
+      "accepting_registrations": true,
+      "teams": true,
+      "rounds_total": 6,
+      "rounds_done": 2,
+      "standings": [
+        {
+          "pos": 1,
+          "name": "Apex Hunters",
+          "number": 17,
+          "car": "Mercedes-AMG GT3 Evo",
+          "car_logo": null,
+          "class": "Pro",
+          "points": 174,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 2,
+          "name": "Late Brakers Racing",
+          "number": 24,
+          "car": "Audi R8 LMS GT3 evo II",
+          "car_logo": null,
+          "class": "Pro",
+          "points": 160,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 3,
+          "name": "Full Send Motorsport",
+          "number": 38,
+          "car": "BMW M4 GT3",
+          "car_logo": null,
+          "class": "Pro",
+          "points": 133,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 4,
+          "name": "Box Box Box",
+          "number": 45,
+          "car": "Lamborghini Huracán GT3 Evo2",
+          "car_logo": null,
+          "class": "Pro",
+          "points": 123,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 5,
+          "name": "Night Shift Racing",
+          "number": 59,
+          "car": "Porsche 992 GT3 R",
+          "car_logo": null,
+          "class": "Pro",
+          "points": 103,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 1,
+          "name": "Speediots Blue",
+          "number": 10,
+          "car": "Ferrari 296 GT3",
+          "car_logo": null,
+          "class": "Pro-Am",
+          "points": 180,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 2,
+          "name": "Pit Lane Penguins",
+          "number": 31,
+          "car": "Honda NSX GT3 Evo",
+          "car_logo": null,
+          "class": "Pro-Am",
+          "points": 141,
+          "country": null,
+          "avatar": null
+        },
+        {
+          "pos": 3,
+          "name": "Tyre Whisperers",
+          "number": 52,
+          "car": "Ford Mustang GT3",
+          "car_logo": null,
+          "class": "Pro-Am",
+          "points": 111,
+          "country": null,
+          "avatar": null
+        }
+      ]
+    }
+  ]
+}

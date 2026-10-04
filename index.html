@@ -3,215 +3,401 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Speediots Racing</title>
-  <meta name="description" content="Speediots Racing — an online sim racing league running clean, competitive Assetto Corsa Competizione championships, endurance events and community races.">
-  <meta name="theme-color" content="#0b0d10">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0d10'/%3E%3Cpath d='M14 44 L30 20 H50 L34 44 Z' fill='%23ff3b1f'/%3E%3C/svg%3E">
+  <title>Speediots Racing — Online Sim Racing League</title>
+  <meta name="description" content="Speediots Racing is an online sim racing league running clean, competitive Assetto Corsa Competizione championships, endurance events and community races.">
+  <meta name="theme-color" content="#07090c">
+  <meta property="og:title" content="Speediots Racing">
+  <meta property="og:description" content="Clean, competitive ACC championships. Live standings, results and race calendar.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Race ticker -->
+<div class="ticker" role="region" aria-label="Next race">
+  <div class="wrap ticker-inner">
+    <span class="ticker-label"><i class="dot"></i>Next race</span>
+    <span class="ticker-text" id="ticker-text">S5 ACC GT3 Championship — registration open on The Sim Grid</span>
+    <a class="ticker-link" id="ticker-link" href="https://www.thesimgrid.com/championships/25108" target="_blank" rel="noopener">Race info →</a>
+  </div>
+</div>
+
 <header class="nav" id="top">
-  <a class="brand" href="#top" aria-label="Speediots Racing home">
-    <span class="brand-mark" aria-hidden="true"></span>
-    <span class="brand-name">SPEEDIOTS<em>RACING</em></span>
-  </a>
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="nav-links" class="nav-links">
-    <a href="#about">About</a>
-    <a href="#series">Series</a>
-    <a href="#racing">How we race</a>
-    <a href="#tools">Tools</a>
-    <a href="#watch">Watch</a>
-    <a class="btn btn-sm" href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">Join Discord</a>
-  </nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Speediots Racing — home">
+      <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="36" height="36">
+      <span class="brand-name">SPEEDIOTS<span>RACING</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <a href="#about">League</a>
+      <a href="#live">Live data</a>
+      <a href="#series">Championships</a>
+      <a href="#join">Join</a>
+      <a href="#tools">Tools</a>
+      <a href="#watch">Watch</a>
+      <a class="btn btn-sm" href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">Join Discord</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main id="main">
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-stripes" aria-hidden="true"></div>
-    <div class="wrap hero-inner">
-      <p class="eyebrow">Online sim racing league · Assetto Corsa Competizione</p>
-      <h1>Fast enough to be <span class="accent">idiots.</span><br>Clean enough to be <span class="accent">racers.</span></h1>
-      <p class="lede">Speediots Racing is where passion for racing meets the thrill of competition — organised championships, endurance events and community races, all run on clear rules and fair stewarding.</p>
-      <div class="hero-cta">
-        <a class="btn" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Register on The Sim Grid</a>
-        <a class="btn btn-ghost" href="#series">See the championships</a>
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-streaks"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="wrap hero-layout">
+      <div class="hero-copy">
+        <p class="kicker"><span class="kicker-bar"></span>Assetto Corsa Competizione League</p>
+        <h1>
+          <span class="line">Race hard.</span>
+          <span class="line">Race clean.</span>
+          <span class="line outline">Race Speediots.</span>
+        </h1>
+        <p class="lede">Organised championships, endurance events and community race nights — run on clear regulations, consistent stewarding and broadcast live with commentary.</p>
+        <div class="actions">
+          <a class="btn" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Register on The Sim Grid</a>
+          <a class="btn btn-ghost" href="#live">Live standings</a>
+        </div>
       </div>
+
+      <aside class="race-card" id="hero-race" aria-label="Next race">
+        <div class="race-card-head">
+          <span class="tag tag-live"><i class="dot"></i><span id="hero-race-status">Season 5</span></span>
+          <span class="race-card-game">ACC · PC</span>
+        </div>
+        <p class="race-card-champ" id="hero-race-champ">S5 ┃ ACC ┃ GT3 Championship</p>
+        <h2 class="race-card-track" id="hero-race-track">Grid is forming</h2>
+        <p class="race-card-date" id="hero-race-date">Calendar &amp; entry list on The Sim Grid</p>
+        <div class="countdown" id="hero-countdown" hidden>
+          <div><b data-cd="d">00</b><span>Days</span></div>
+          <div><b data-cd="h">00</b><span>Hrs</span></div>
+          <div><b data-cd="m">00</b><span>Min</span></div>
+          <div><b data-cd="s">00</b><span>Sec</span></div>
+        </div>
+        <a class="btn btn-block" id="hero-race-link" href="https://www.thesimgrid.com/championships/25108" target="_blank" rel="noopener">Enter the championship</a>
+      </aside>
     </div>
 
     <div class="wrap">
       <ul class="stats" aria-label="League statistics">
-        <li><strong data-count="6000">6,000</strong><span>+ laps driven</span></li>
-        <li><strong data-count="36">36</strong><span>championship events</span></li>
-        <li><strong data-count="250">250</strong><span>+ race sessions</span></li>
-        <li><strong data-count="1600">1,600</strong><span>+ Sim Grid followers</span></li>
+        <li><b data-count="6000">6,000</b><span>Laps driven</span></li>
+        <li><b data-count="36">36</b><span>Championship events</span></li>
+        <li><b data-count="250">250</b><span>Race sessions</span></li>
+        <li><b data-count="1600">1,600</b><span>Sim Grid followers</span></li>
       </ul>
     </div>
   </section>
 
+  <!-- PLATFORMS STRIP -->
+  <div class="strip" aria-label="Platforms">
+    <div class="wrap strip-inner">
+      <span>Racing on <b>Assetto Corsa Competizione</b></span>
+      <span>Hosted on <b>The Sim Grid</b></span>
+      <span>Broadcast on <b>Twitch</b> &amp; <b>YouTube</b></span>
+      <span>Paddock on <b>Discord</b></span>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <section class="section" id="about">
-    <div class="wrap two-col">
-      <div>
-        <p class="eyebrow">Who we are</p>
-        <h2>A league built by drivers, for drivers.</h2>
+    <div class="wrap">
+      <header class="section-head">
+        <span class="section-num">01</span>
+        <div>
+          <p class="eyebrow">The league</p>
+          <h2>Built by drivers,<br>run like a series.</h2>
+        </div>
+      </header>
+
+      <div class="about">
+        <div class="prose">
+          <p class="big">Speediots Racing is an online sim racing league and esports community where passion for racing meets the thrill of competition.</p>
+          <p>Our home sim is Assetto Corsa Competizione, and our grids run from GT4 rookies to GT3 front-runners. The name is a wink — we take ourselves lightly and the racing seriously.</p>
+          <p>Every event runs on published regulations. Incidents are reviewed by stewards, decisions are applied consistently, and the fight on track stays hard but fair.</p>
+        </div>
+        <div class="pillars">
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v4H4zM4 10h10v4H4zM4 16h16v4H4z"/></svg>
+            <h3>Clear regulations</h3>
+            <p>Conduct, stewarding and penalty rules published up front — identical for every driver.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6z"/></svg>
+            <h3>Consistent stewarding</h3>
+            <p>Incidents reviewed after the race. Decisions explained. No favourites.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v11H3zM8 19h8v2H8z"/></svg>
+            <h3>Live broadcasts</h3>
+            <p>Championship rounds streamed with commentary on Twitch, replays on YouTube.</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3.5"/><circle cx="16" cy="8" r="3.5"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6zM12 20c0-2 .5-3.6 1.6-4.8A6 6 0 0 1 22 20z"/></svg>
+            <h3>Community first</h3>
+            <p>All levels welcome. Rookies get help, fast drivers get a real fight.</p>
+          </article>
+        </div>
       </div>
-      <div class="prose">
-        <p>Speediots Racing is an online sim racing league and esports community that brings drivers together for competitive championships, organised race nights and community events. Our home sim is <strong>Assetto Corsa Competizione</strong>, and our grids span everything from GT4 rookies to GT3 aliens.</p>
-        <p>The name is a wink — we take ourselves lightly and our racing seriously. Every event runs on published regulations, with stewarding and penalties handled consistently so that the fight on track stays hard but fair.</p>
-        <p>Registration, entry lists and results live on <a href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">The Sim Grid</a>; the paddock chat, briefings and banter live on our <a href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">Discord</a>.</p>
+    </div>
+  </section>
+
+  <!-- LIVE DATA (SimGrid) -->
+  <section class="section section-dark" id="live">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="section-num">02</span>
+        <div>
+          <p class="eyebrow">Race control</p>
+          <h2>Live from The Sim Grid.</h2>
+        </div>
+        <div class="sync" id="sync">
+          <span class="sync-pill" id="sync-pill"><i class="dot"></i><span id="sync-text">Connecting…</span></span>
+          <span class="sync-time" id="sync-time"></span>
+        </div>
+      </header>
+
+      <div class="hub" id="hub" data-state="loading">
+        <div class="champ-tabs" id="champ-tabs" role="tablist" aria-label="Championships"></div>
+
+        <div class="hub-grid">
+          <!-- Standings -->
+          <section class="panel panel-standings" aria-labelledby="standings-title">
+            <header class="panel-head">
+              <div>
+                <p class="panel-label">Championship standings</p>
+                <h3 id="standings-title">Standings</h3>
+              </div>
+              <a class="panel-link" id="standings-link" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Full table ↗</a>
+            </header>
+
+            <div class="champ-meta" id="champ-meta">
+              <div class="meter"><span>Rounds</span><b id="m-rounds">–</b><div class="bar"><i id="m-rounds-bar"></i></div></div>
+              <div class="meter"><span>Grid</span><b id="m-grid">–</b><div class="bar"><i id="m-grid-bar"></i></div></div>
+            </div>
+
+            <div class="class-chips" id="class-chips" role="tablist" aria-label="Car class"></div>
+
+            <div class="table-wrap">
+              <table class="timing" id="standings">
+                <thead>
+                  <tr><th class="c-pos">Pos</th><th class="c-num">No.</th><th>Driver</th><th class="c-car">Car</th><th class="c-pts">Pts</th><th class="c-gap">Gap</th></tr>
+                </thead>
+                <tbody id="standings-body"></tbody>
+              </table>
+            </div>
+            <button class="more" id="standings-more" hidden>Show full standings</button>
+          </section>
+
+          <!-- Next race -->
+          <section class="panel panel-next" aria-labelledby="next-title">
+            <div class="next-bg" id="next-bg" aria-hidden="true"></div>
+            <header class="panel-head">
+              <div>
+                <p class="panel-label">Next race</p>
+                <h3 id="next-title">—</h3>
+              </div>
+            </header>
+            <p class="next-champ" id="next-champ"></p>
+            <p class="next-date" id="next-date"></p>
+            <div class="countdown countdown-sm" id="next-countdown">
+              <div><b data-cd="d">--</b><span>Days</span></div>
+              <div><b data-cd="h">--</b><span>Hrs</span></div>
+              <div><b data-cd="m">--</b><span>Min</span></div>
+              <div><b data-cd="s">--</b><span>Sec</span></div>
+            </div>
+            <a class="panel-link" id="next-link" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Race details ↗</a>
+          </section>
+
+          <!-- Latest result -->
+          <section class="panel panel-result" aria-labelledby="result-title">
+            <header class="panel-head">
+              <div>
+                <p class="panel-label">Latest result</p>
+                <h3 id="result-title">—</h3>
+              </div>
+              <a class="panel-link" id="result-link" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Results ↗</a>
+            </header>
+            <p class="result-sub" id="result-sub"></p>
+            <ol class="podium" id="podium"></ol>
+            <div class="fastest" id="fastest" hidden>
+              <span class="fl-badge">Fastest lap</span>
+              <b id="fastest-time"></b>
+              <span id="fastest-name"></span>
+            </div>
+          </section>
+        </div>
+
+        <!-- Calendar -->
+        <section class="panel panel-calendar" aria-labelledby="cal-title">
+          <header class="panel-head">
+            <div>
+              <p class="panel-label">Race calendar</p>
+              <h3 id="cal-title">Coming up</h3>
+            </div>
+          </header>
+          <ol class="calendar" id="calendar"></ol>
+        </section>
+
+        <!-- Shown when no SimGrid data is available -->
+        <div class="hub-empty" id="hub-empty" hidden>
+          <div>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="10" width="40" height="28" rx="4"/><path d="M10 30l8-8 6 5 10-11 4 4"/></svg>
+            <h3>Live timing is warming up</h3>
+            <p>Standings, results and the race calendar will appear here automatically. Until then, everything is on The Sim Grid.</p>
+            <a class="btn btn-sm" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Open The Sim Grid</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SERIES -->
-  <section class="section section-alt" id="series">
+  <section class="section" id="series">
     <div class="wrap">
-      <p class="eyebrow">Championships</p>
-      <h2>Pick your grid.</h2>
-      <p class="section-lede">We run several ACC series through the year. Calendars, entry lists and live standings are on The Sim Grid.</p>
+      <header class="section-head">
+        <span class="section-num">03</span>
+        <div>
+          <p class="eyebrow">Championships</p>
+          <h2>Pick your grid.</h2>
+        </div>
+      </header>
 
-      <div class="cards">
-        <article class="card card-feature">
-          <div class="card-tag live">Season 5 · Live</div>
-          <h3>ACC GT3 Championship</h3>
-          <p>Our flagship sprint series. Full GT3 grid, multi-round calendar on the classic European circuits, broadcast with live commentary.</p>
-          <ul class="meta">
-            <li><span>Class</span>GT3</li>
-            <li><span>Format</span>Sprint · multi-round</li>
-            <li><span>Broadcast</span>Live w/ commentary</li>
-          </ul>
+      <div class="series">
+        <article class="series-card series-feature">
+          <div class="series-img" style="--img:url('https://cdn.thesimgrid.com/6basfspvver4qmilpoqkm69o7t0z')"></div>
+          <div class="series-body">
+            <span class="tag tag-live"><i class="dot"></i>Season 5 · Live</span>
+            <h3>ACC GT3 Championship</h3>
+            <p>The flagship. A full GT3 grid over a multi-round calendar on the great European circuits, every round broadcast with commentary.</p>
+            <dl class="spec">
+              <div><dt>Class</dt><dd>GT3</dd></div>
+              <div><dt>Format</dt><dd>Sprint · multi-round</dd></div>
+              <div><dt>Broadcast</dt><dd>Live + commentary</dd></div>
+            </dl>
+            <a class="btn btn-sm" href="https://www.thesimgrid.com/championships/25108" target="_blank" rel="noopener">Championship page</a>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="card-tag">Endurance</div>
-          <h3>ACC Endurance Series</h3>
-          <p>Longer races, tyre and fuel strategy, driver stints and the long game. Built for teams who like the night to go on.</p>
-          <ul class="meta">
-            <li><span>Class</span>GT3</li>
-            <li><span>Format</span>Endurance rounds</li>
-          </ul>
+        <article class="series-card">
+          <span class="series-cls">GT3</span>
+          <h3>Endurance Series</h3>
+          <p>Longer races, tyre and fuel strategy, driver swaps. Built for teams that like a long night.</p>
+          <dl class="spec"><div><dt>Format</dt><dd>Endurance rounds</dd></div><div><dt>Entry</dt><dd>Teams</dd></div></dl>
         </article>
 
-        <article class="card">
-          <div class="card-tag">Multiclass</div>
-          <h3>GT4 / GT2 Sprint Championship</h3>
-          <p>Two classes, one track. Learn to manage traffic — or become the traffic — in our multiclass sprint format.</p>
-          <ul class="meta">
-            <li><span>Classes</span>GT4 + GT2</li>
-            <li><span>Format</span>Sprint · multiclass</li>
-          </ul>
+        <article class="series-card">
+          <span class="series-cls">GT4 · GT2</span>
+          <h3>Multiclass Sprint</h3>
+          <p>Two classes, one track. Learn to manage traffic — or become the traffic.</p>
+          <dl class="spec"><div><dt>Format</dt><dd>Sprint · multiclass</dd></div><div><dt>Entry</dt><dd>Solo</dd></div></dl>
         </article>
 
-        <article class="card">
-          <div class="card-tag">Special</div>
-          <h3>Speediots Cup Series &amp; one-offs</h3>
-          <p>Stock-car style cup races, special events and community nights between seasons. Low pressure, high chaos (the good kind).</p>
-          <ul class="meta">
-            <li><span>Format</span>One-off events</li>
-          </ul>
+        <article class="series-card">
+          <span class="series-cls">Special</span>
+          <h3>Cup Series &amp; one-offs</h3>
+          <p>Stock-car style cup races, specials and community nights between seasons.</p>
+          <dl class="spec"><div><dt>Format</dt><dd>One-off events</dd></div><div><dt>Entry</dt><dd>Open</dd></div></dl>
         </article>
-      </div>
-
-      <div class="center">
-        <a class="btn" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">View calendar &amp; standings</a>
       </div>
     </div>
   </section>
 
-  <!-- HOW WE RACE -->
-  <section class="section" id="racing">
+  <!-- JOIN -->
+  <section class="section section-dark" id="join">
     <div class="wrap">
-      <p class="eyebrow">How we race</p>
-      <h2>Hard. Fair. Together.</h2>
+      <header class="section-head">
+        <span class="section-num">04</span>
+        <div>
+          <p class="eyebrow">Get on the grid</p>
+          <h2>Four steps to lights out.</h2>
+        </div>
+      </header>
       <ol class="steps">
-        <li>
-          <span class="step-num">01</span>
-          <h3>Join the paddock</h3>
-          <p>Hop into our Discord to meet the grid, read the regulations and catch briefings.</p>
-        </li>
-        <li>
-          <span class="step-num">02</span>
-          <h3>Register</h3>
-          <p>Sign up for a championship on The Sim Grid. Pick your car, upload your livery.</p>
-        </li>
-        <li>
-          <span class="step-num">03</span>
-          <h3>Race clean</h3>
-          <p>Respect track limits, leave a car's width, and let the stewards handle the rest.</p>
-        </li>
-        <li>
-          <span class="step-num">04</span>
-          <h3>Get on stream</h3>
-          <p>Every championship round is broadcast. Bring your family. Blame lag.</p>
-        </li>
+        <li><span class="step-n">01</span><h3>Join the paddock</h3><p>Hop into Discord, meet the grid and read the regulations.</p></li>
+        <li><span class="step-n">02</span><h3>Register</h3><p>Sign up for a championship on The Sim Grid and choose your car.</p></li>
+        <li><span class="step-n">03</span><h3>Upload your livery</h3><p>Bring your own design — or run one of the team liveries.</p></li>
+        <li><span class="step-n">04</span><h3>Race clean</h3><p>Leave a car's width. Respect track limits. Let stewards do the rest.</p></li>
       </ol>
-
-      <div class="values">
-        <div><h4>Clear rules</h4><p>Published regulations for conduct, stewarding and penalties — the same for everyone.</p></div>
-        <div><h4>Consistent stewarding</h4><p>Incidents reviewed after the race, decisions explained, no favourites.</p></div>
-        <div><h4>Community first</h4><p>All skill levels welcome. Rookies get help, fast drivers get competition.</p></div>
-      </div>
     </div>
   </section>
 
   <!-- TOOLS -->
-  <section class="section section-alt" id="tools">
-    <div class="wrap two-col">
-      <div>
-        <p class="eyebrow">Driver tools</p>
-        <h2>Fuel calculator</h2>
-        <p class="section-lede">How much fuel do you need? Plug in the numbers — we add a safety lap so you don't coast home.</p>
-      </div>
-      <form class="calc" id="fuel-calc" autocomplete="off">
-        <label>Race length <span class="unit">min</span>
-          <input type="number" id="f-len" min="1" step="1" value="60" inputmode="numeric">
-        </label>
-        <label>Average lap time
-          <span class="lap">
-            <input type="number" id="f-min" min="0" step="1" value="1" aria-label="Minutes" inputmode="numeric"><b>:</b>
-            <input type="number" id="f-sec" min="0" max="59.999" step="0.001" value="48.5" aria-label="Seconds" inputmode="decimal">
-          </span>
-        </label>
-        <label>Fuel per lap <span class="unit">L</span>
-          <input type="number" id="f-per" min="0.1" step="0.01" value="3.1" inputmode="decimal">
-        </label>
-        <label>Safety laps
-          <input type="number" id="f-safe" min="0" step="1" value="1" inputmode="numeric">
-        </label>
+  <section class="section" id="tools">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="section-num">05</span>
+        <div>
+          <p class="eyebrow">Driver tools</p>
+          <h2>Fuel calculator.</h2>
+        </div>
+      </header>
+
+      <div class="tool">
+        <form class="calc" id="fuel-calc" autocomplete="off">
+          <label>Race length <small>minutes</small>
+            <input type="number" id="f-len" min="1" step="1" value="60" inputmode="numeric">
+          </label>
+          <label>Average lap <small>m : ss.sss</small>
+            <span class="lap">
+              <input type="number" id="f-min" min="0" step="1" value="1" aria-label="Minutes" inputmode="numeric"><b>:</b>
+              <input type="number" id="f-sec" min="0" max="59.999" step="0.001" value="48.5" aria-label="Seconds" inputmode="decimal">
+            </span>
+          </label>
+          <label>Fuel per lap <small>litres</small>
+            <input type="number" id="f-per" min="0.1" step="0.01" value="3.1" inputmode="decimal">
+          </label>
+          <label>Safety laps <small>extra</small>
+            <input type="number" id="f-safe" min="0" step="1" value="1" inputmode="numeric">
+          </label>
+        </form>
         <output class="calc-out" for="f-len f-min f-sec f-per f-safe">
-          <div><span>Laps</span><strong id="o-laps">–</strong></div>
-          <div><span>Fuel needed</span><strong id="o-fuel">–</strong></div>
+          <div><span>Race laps</span><b id="o-laps">–</b></div>
+          <div class="hi"><span>Fuel to load</span><b id="o-fuel">–</b></div>
         </output>
-      </form>
+      </div>
+      <p class="note">Timed races finish when the leader crosses the line after the clock ends, so laps are rounded up.</p>
     </div>
   </section>
 
-  <!-- WATCH / SOCIAL -->
-  <section class="section" id="watch">
+  <!-- WATCH -->
+  <section class="section section-dark" id="watch">
     <div class="wrap">
-      <p class="eyebrow">Watch &amp; follow</p>
-      <h2>Catch every round live.</h2>
+      <header class="section-head">
+        <span class="section-num">06</span>
+        <div>
+          <p class="eyebrow">Watch &amp; follow</p>
+          <h2>Never miss a round.</h2>
+        </div>
+      </header>
       <div class="socials">
-        <a class="social twitch" href="https://www.twitch.tv/speediots" target="_blank" rel="noopener">
-          <span class="s-name">Twitch</span><span class="s-handle">twitch.tv/speediots</span><span class="s-desc">Live race broadcasts with commentary</span>
+        <a class="social" style="--c:#9146ff" href="https://www.twitch.tv/speediots" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2 2 6v14h5v3h3l3-3h4l5-5V2zm16 12-3 3h-5l-3 3v-3H5V4h15z M15 7h2v5h-2zM10 7h2v5h-2z"/></svg>
+          <b>Twitch</b><span>Live race broadcasts</span><em>twitch.tv/speediots ↗</em>
         </a>
-        <a class="social youtube" href="https://www.youtube.com/@SPEEDIOTS" target="_blank" rel="noopener">
-          <span class="s-name">YouTube</span><span class="s-handle">@SPEEDIOTS</span><span class="s-desc">Full race replays &amp; highlights</span>
+        <a class="social" style="--c:#ff0033" href="https://www.youtube.com/@SPEEDIOTS" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>
+          <b>YouTube</b><span>Replays &amp; highlights</span><em>@SPEEDIOTS ↗</em>
         </a>
-        <a class="social discord" href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">
-          <span class="s-name">Discord</span><span class="s-handle">The paddock</span><span class="s-desc">Briefings, sign-ups, banter</span>
+        <a class="social" style="--c:#5865f2" href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 -.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a13 13 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.4c-1.2 0-2.1-1.1-2.1-2.4S6.8 10.6 8 10.6s2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4zm8 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4z"/></svg>
+          <b>Discord</b><span>Briefings &amp; sign-ups</span><em>Join the paddock ↗</em>
         </a>
-        <a class="social tiktok" href="https://www.tiktok.com/@speediots" target="_blank" rel="noopener">
-          <span class="s-name">TikTok</span><span class="s-handle">@speediots</span><span class="s-desc">Clips, crashes &amp; overtakes</span>
+        <a class="social" style="--c:#25f4ee" href="https://www.tiktok.com/@speediots" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2-2.8V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg>
+          <b>TikTok</b><span>Clips &amp; overtakes</span><em>@speediots ↗</em>
         </a>
       </div>
     </div>
@@ -219,13 +405,13 @@
 
   <!-- CTA -->
   <section class="cta">
-    <div class="checker" aria-hidden="true"></div>
+    <div class="cta-flag" aria-hidden="true"></div>
     <div class="wrap cta-inner">
-      <h2>Lights out soon. Are you on the grid?</h2>
-      <p>Join the Discord, register on The Sim Grid and we'll see you at turn one.</p>
-      <div class="hero-cta">
+      <p class="eyebrow">Lights out soon</p>
+      <h2>Your car is waiting on the grid.</h2>
+      <div class="actions">
         <a class="btn" href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">Join Discord</a>
-        <a class="btn btn-ghost" href="https://www.speediots.com/" target="_blank" rel="noopener">speediots.com</a>
+        <a class="btn btn-ghost" href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">Register on The Sim Grid</a>
       </div>
     </div>
   </section>
@@ -233,10 +419,34 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer-inner">
-    <span class="brand-name small">SPEEDIOTS<em>RACING</em></span>
-    <p>Online sim racing league · Assetto Corsa Competizione</p>
-    <p class="fine">&copy; <span id="year">2026</span> Speediots Racing. Not affiliated with Kunos Simulazioni or The Sim Grid.</p>
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top">
+        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="32" height="32">
+        <span class="brand-name">SPEEDIOTS<span>RACING</span></span>
+      </a>
+      <p class="footer-tag">Online sim racing league · Assetto Corsa Competizione</p>
+    </div>
+    <nav aria-label="Footer">
+      <h4>League</h4>
+      <a href="#about">About</a><a href="#series">Championships</a><a href="#live">Standings</a><a href="#join">Join</a>
+    </nav>
+    <nav aria-label="Follow">
+      <h4>Follow</h4>
+      <a href="https://www.twitch.tv/speediots" target="_blank" rel="noopener">Twitch</a>
+      <a href="https://www.youtube.com/@SPEEDIOTS" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://discord.gg/qwN5NfphbQ" target="_blank" rel="noopener">Discord</a>
+      <a href="https://www.tiktok.com/@speediots" target="_blank" rel="noopener">TikTok</a>
+    </nav>
+    <nav aria-label="Links">
+      <h4>Links</h4>
+      <a href="https://www.thesimgrid.com/communities/speediots-racing" target="_blank" rel="noopener">The Sim Grid</a>
+      <a href="https://www.speediots.com/" target="_blank" rel="noopener">speediots.com</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <span>&copy; <span id="year">2026</span> Speediots Racing</span>
+    <span>Race data via The Sim Grid. Not affiliated with Kunos Simulazioni or The Sim Grid.</span>
   </div>
 </footer>
 
